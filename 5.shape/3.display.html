@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>display</title>
+<style>
+    ul.inline li {
+        display: inline;
+        width: 10rem;
+        height: 3rem; /*width&height는 inline 객체들에는 적용이 안되는 값이라는것을 확인가능하다.*/
+        background: red;
+    }
+
+    ul.block li {
+        display: inline-block; /*width&height 속성이 block 값이 주어졌으므로 적용이 된다.*/
+    }
+
+    ul.none li {
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <ul>
+        <li>사과</li>
+        <li>딸기</li>
+    </ul>
+    <ul class='inline'>
+        <li>사과</li>
+        <li>딸기</li>
+    </ul>
+    <ul class='inline block'>
+        <li>사과</li>
+        <li>딸기</li>
+    </ul>
+    <ul class='none'>
+        <li>사과</li>
+        <li>딸기</li>
+    </ul>
+</body>
+</html>

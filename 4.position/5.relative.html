@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>position: relative</title>
+<style>
+    div {
+        padding: 3rem;
+        float: left;
+    }
+
+    .one {
+        background: red;
+    }
+
+    .two {
+        background: orange;
+        position: relative; /*position: static일때 객체가 배치될 예정이였던 위치를 기준점으로 삼는다.*/
+        left: 2rem; /*그 기준점으로부터 left, top 만큼 background를 이동시킨다.*/
+        top: 1rem;
+    }
+</style>
+</head>
+<body>
+    <div class='one'></div>
+    <div class="two"></div>
+</body>
+</html>

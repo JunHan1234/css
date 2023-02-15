@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>attribute selector</title>
+<style>
+    a[target] {
+        border: .1rem solid;
+    }
+
+    a[href='fire.html'] {
+        text-decoration: none;
+    }
+
+    a[class~='best'] { 
+        background: yellow;
+    } /* "~"는 class속성값이 접미사이름에 적용되는 값 */
+
+    a[class|='best'] {
+        border: .1rem dotted;
+    } /* "|"는 접두사이름에 적용되는 값 */
+
+    a[class^='best'] {
+        background: lightgreen;
+    } /* "^"는 시작이름에 적용되는 값 */
+
+    a[class$='best'] {
+        background: pink;
+    } /* "$"는 끝이름에 적용되는 값 */
+
+    a[class*='best'] {
+        background: lightblue;
+    } /* "*"는 이름에 '값'('best')이 포함되어있으면 전부 적용되는 값 */
+</style>
+</head>
+<body>
+    <ul>
+        <li><a href='tree.html' target='_blank'>목</a></li>
+        <li><a href='fire.html'>화</a></li>
+        <li><a class='my best choice'>토</a></li>
+        <li><a class='best-choice'>금</a></li>
+        <li><a class='mybest'>수</a></li>
+    </ul>
+</body>
+</html>
